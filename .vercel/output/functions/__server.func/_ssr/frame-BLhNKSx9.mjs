@@ -1,0 +1,980 @@
+import { i as __toESM } from "../_runtime.mjs";
+import { C as require_jsx_runtime, X as require_react, b as Link, p as useRouterState } from "../_libs/@tanstack/react-router+[...].mjs";
+import { r as Menu, t as X } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/frame-BLhNKSx9.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+var brand = {
+	name: "Yiam",
+	line: "Magyar idegenvezetés Thaiföldön",
+	phoneHu: "+36 30 861 1959",
+	phoneTh: "+66 81 554 4878",
+	email: "info@yiamtravel.com"
+};
+var categoryLabel = {
+	classic: "Classic",
+	day: "Egynapos",
+	circuit: "Körút",
+	tailor: "Szabott",
+	meditation: "Meditáció"
+};
+var tours = [
+	{
+		slug: "bkk-1",
+		title: "Bangkok, ahogy egy napba belefér",
+		eyebrow: "BKK-1",
+		category: "classic",
+		place: "Bangkok",
+		length: "Egész nap",
+		blurb: "A márványtemplom, a fekvő Buddha, a Királyi Palota és a Smaragd Buddha, aztán a thonburi csatornák és a Hajnal temploma. A kötelezők, de nem rohanva, és nem idegenvezető-szöveggel a buszból.",
+		image: "/photos/palace.jpg",
+		imageAlt: "A bangkoki Királyi Palota arany és zöld tetőzete",
+		featured: true,
+		highlights: [
+			"Wat Benchamabophit",
+			"Wat Pho",
+			"Grand Palace",
+			"Thonburi csónak",
+			"Wat Arun"
+		],
+		goodFor: "Első bangkoki napra, ha a kultúra tényleg érdekel.",
+		days: [
+			{
+				label: "Reggel",
+				text: "A hotel előteréből indulunk. Első a Wat Ben, a márványtemplom: V. Ráma építtette carrarai márványból a századfordulón, és azóta sem építettek hozzá. Itt van az ország egyik legszebb bronz Buddha-gyűjteménye, és ez az a kolostor, ahol meg lehet mutatni, hogyan élnek a szerzetesek — besétálunk a kutikig."
+			},
+			{
+				label: "Délelőtt",
+				text: "A Wat Pho-n körülbelül egy órát érdemes tölteni. A 46 méteres fekvő Buddha aranylemezzel borított, téglából rakott test. Körülötte 99 sztúpa, a négy Ráma királyi chedije, a világ első masszázsiskolája, és a főtemplom bronz Buddhája."
+			},
+			{
+				label: "Dél",
+				text: "A Grand Palace a nap leglátványosabb része. Hosszú nadrág vagy szoknya, vállat és hasat takaró felső — bermuda, halásznadrág, szakadt farmer nem megy át. Bent a Smaragd Buddha, egyetlen jáspisdarabból faragva, 64 centi, az ország legfontosabb Buddha-ábrázolása. A magyarázat a kapun kívül hangzik el: bent úgyse lehet beszélni."
+			},
+			{
+				label: "Délután",
+				text: "Közel egy óra csónak a thonburi klongokon, hegyes orrú thai hajóval, kiszuperált teherautó-motorral. A folyó felől Bangkok más város: teakfa ház és roskadozó putri egymás mellett, kolostorok előtt elszaporodott harcsák, napozó varánuszok. Utána a Wat Arun, a Hajnal temploma a folyó túloldalán."
+			}
+		]
+	},
+	{
+		slug: "bkk-l",
+		title: "Palota, fekvő Buddha, arany Buddha",
+		eyebrow: "BKK-L",
+		category: "classic",
+		place: "Bangkok",
+		length: "Rövidebb nap",
+		blurb: "Annak, aki látni akarja a három kötelezőt, de nem akar egy egész napot templomudvarokon tölteni. Királyi Palota, Wat Pho, Wat Traimit.",
+		image: "/photos/palace.jpg",
+		imageAlt: "Zománcozott templomtetők Bangkokban",
+		highlights: [
+			"Grand Palace",
+			"Wat Pho",
+			"Wat Traimit"
+		],
+		goodFor: "Átszállásos napra, vagy ha a család nem buddhista szemináriumra jött.",
+		days: [{
+			label: "A nap",
+			text: "A Királyi Palota és a Smaragd Buddha, a Wat Pho fekvő Buddhája, majd a Wat Traimit tömör arany Buddhája — a másfél tonnás szobrot évtizedekig gipsz alatt rejtegették. Kevesebb séta, ugyanaz a magyarázat a lényegről: miért fekszik, miért arany, mit szabad és mit nem egy thai szentélyben."
+		}]
+	},
+	{
+		slug: "vizi",
+		title: "Vízi — só, vonat, kókusz, csónak",
+		eyebrow: "Damnoen Saduak",
+		category: "classic",
+		place: "Bangkok környéke",
+		length: "Egész nap",
+		blurb: "Hajnalban indulunk. Tengeri sómedencék, a Maeklong vasúti piac, ahol a vonat a mangón átrobog, kókuszfarm, aztán csónak a Damnoen Saduak csatornáin.",
+		image: "/photos/market.jpg",
+		imageAlt: "Csónakok gyümölccsel egy thai vízipiacon",
+		featured: true,
+		highlights: [
+			"Sófarm",
+			"Maeklong vasúti piac",
+			"Kókuszfarm",
+			"Damnoen Saduak"
+		],
+		goodFor: "Első vidéki napra, gyerekkel különösen.",
+		days: [
+			{
+				label: "Hajnal",
+				text: "Fél hét körül indulunk a hotelből, hogy a Maeklongon még lássuk, ahogy az árusok felkapkodják a portékát a sínekről. Előtte egy sófarm: medencék, kézi só, és hogy miért kerül a thai konyhába másféle só, mint otthon."
+			},
+			{
+				label: "Délelőtt",
+				text: "Kókuszfarm — víz, hús, cukor, olaj, egy pálmából. Aztán csónakba ülünk a Damnoen Saduak közelében. A piac ma már főleg a látogatóké, ezt nem tagadom, de a csatorna, a házak és a „garázsban” álló csónakok ettől még igaziak."
+			},
+			{
+				label: "Ebéd",
+				text: "A vízipiac körül lehet autentikus thai ételt enni, saját költségen. Aki nem kívánja, a közelben van gyorsétterem is. Az üdítőt mindig a vendég fizeti."
+			}
+		]
+	},
+	{
+		slug: "amphawa",
+		title: "Amphawa, a piac, ami még él",
+		eyebrow: "Hétvége",
+		category: "day",
+		place: "Samut Songkhram",
+		length: "Fél vagy egész nap",
+		blurb: "A Damnoen Saduak a prospektusoké. Az Amphawa hétvégén a thaiké: tömeg, alacsony ár, tűzhely a csónakban, és este a szentjánosbogarak a folyó fölött.",
+		image: "/photos/market.jpg",
+		imageAlt: "Reggeli fény egy csatornán",
+		highlights: [
+			"Élő vízipiac",
+			"Helyi konyha",
+			"Folyóparti este"
+		],
+		goodFor: "Annak, aki már látta a kötelező vízipiacot, vagy hétvégén érkezik.",
+		days: [{
+			label: "A nap",
+			text: "Amphawa hétvégén működik, hétköznap csendesebb. A thaik az ár miatt jönnek, külföldi aránylag kevés. Lehet összekötni a Damnoen Saduakkal, vagy csak az élő piacra menni, és ha belefér, csónakkal le egészen a tenger felé. Este a folyóparti tűzhelyek a lényeg, nem a szuvenír."
+		}]
+	},
+	{
+		slug: "ayutthaya",
+		title: "Az elfeledett királyság",
+		eyebrow: "Világörökség",
+		category: "classic",
+		place: "Ayutthaya",
+		length: "Egész nap",
+		blurb: "A régi főváros romjai között: három királyi chedi, a fa gyökerébe nőtt Buddha-fej, a hatalmas arany ülő Buddha, és a folyóparti gótikus templom, ahová drótkötélpáston jutunk.",
+		image: "/photos/ayutthaya.jpg",
+		imageAlt: "Ayutthaya téglából rakott chedijei alkonyatkor",
+		featured: true,
+		highlights: [
+			"Wat Phra Si Sanphet",
+			"Wat Mahathat",
+			"Wat Phanan Choeng",
+			"Wat Niwet"
+		],
+		goodFor: "Történelemre, ha Bangkok templomai után még van kedved a romokhoz.",
+		days: [
+			{
+				label: "A város",
+				text: "Ayutthaya a 14. századtól 1767-ig a királyság fővárosa volt, amíg a burmai sereg fel nem égette. A Wat Phra Si Sanphet három chedije a királyi palota szíve. A névadó bronz Buddha maradványai a Wat Pho egyik sztúpájába épültek be."
+			},
+			{
+				label: "A fej a fában",
+				text: "A Wat Mahathatnál a Buddha-fejet egy fa gyökerei ölelik. A Wat Phanan Choeng óriási, egykor fekete lakkos ülő Buddhája a legrégebbi templomok egyike, thai és kínai hatással. A Viharn Phra Mongkhon Bophit közel 13 méteres aranyozott szobra 1538-ból való."
+			},
+			{
+				label: "A gótika",
+				text: "A nap végén a Wat Niwet Thammaprawat: V. Ráma európai, gótikus temploma a Chao Phraya partján. Színes üveg, kőfaragás, és egy kis drótköteles csónak a túlpartra. Este vissza a szállodába, fejben a romokkal."
+			}
+		]
+	},
+	{
+		slug: "erawan",
+		title: "Erawan és a Kwai híd",
+		eyebrow: "Kanchanaburi",
+		category: "day",
+		place: "Kanchanaburi",
+		length: "Egész nap",
+		blurb: "A Tigrisbarlang-templom a hegy tetején, aztán az Erawan hét zuhataga, visszafelé pedig a Kwai híd. Hosszú nap, de a víz hideg és a história nehéz — mindkettő megéri.",
+		image: "/photos/sukhothai.jpg",
+		imageAlt: "Csendes víz és ősi kő egy thai történelmi parkban",
+		highlights: [
+			"Wat Tham Sua",
+			"Erawan hét szint",
+			"Kwai híd"
+		],
+		goodFor: "Annak, aki úszni is akar, nem csak fényképezni.",
+		days: [
+			{
+				label: "Reggel",
+				text: "A Wat Tham Sua a hegyen van. Fel lehet menni a meredek lépcsőn, vagy a felvonón, ha jár. A barlangtemplomban áldás kérhető. A panoráma a lényeg, nem a sietség."
+			},
+			{
+				label: "A vízesés",
+				text: "Az Erawan hét szintje a nemzeti parkban. Az alsó medencékben lehet úszni, a halak kíváncsiak. Zárt cipő és váltás ruha jól jön. A felső szintek már túra, nem séta."
+			},
+			{
+				label: "A híd",
+				text: "Visszafelé a Kwai híd. A második világháború vasútja és a temető nem díszlet: aki itt áll meg, az a halottak miatt áll meg, nem a film miatt. Estére Bangkok."
+			}
+		]
+	},
+	{
+		slug: "kwai",
+		title: "Korán a sínek mellé",
+		eyebrow: "Kwai-nap",
+		category: "day",
+		place: "Kanchanaburi",
+		length: "Egész nap, hajnaltól",
+		blurb: "Negyed hét előtt indulunk, mert Kanchanaburi messze van. Vasúti piac, kókusz, rövid csónak a vízipiacnál, aztán a Tigrisbarlang-templom és a híd vidéke.",
+		image: "/photos/ayutthaya.jpg",
+		imageAlt: "Meleg fény régi falakon",
+		highlights: [
+			"Vasúti piac",
+			"Kókuszfarm",
+			"Wat Tham Sua",
+			"Kwai"
+		],
+		goodFor: "Ha az Erawan úszás helyett a vidék és a történelem érdekel.",
+		days: [{
+			label: "A nap",
+			text: "A legtöbb bangkoki hotel reggelije hattól elérhető — ezen a napon azt érdemes kihasználni. Első egy piac a működő sínek mellett, aztán kókuszfarm, rövid csónakút a Damnoen Saduak közelében, majd a Wat Tham Sua. A lépcső fárasztó, a felvonó nem mindig jár. A nap a Kwai vidékén zárul, és későn érünk vissza."
+		}]
+	},
+	{
+		slug: "ejjeli-bangkok",
+		title: "Folyó, show, üvegpadló",
+		eyebrow: "Éjszaka",
+		category: "day",
+		place: "Bangkok",
+		length: "Este",
+		blurb: "Asiatique a folyón, Calypso-show, aztán a MahaNakhon üvegpadlója. A végén tuk-tuk vissza a hotelbe. Könnyű este, nem templom.",
+		image: "/photos/river.jpg",
+		imageAlt: "Bangkok a Chao Phraya fölött, kék órában",
+		highlights: [
+			"Asiatique",
+			"Calypso show",
+			"MahaNakhon",
+			"Tuk-tuk"
+		],
+		goodFor: "Az első vagy az utolsó estére.",
+		days: [{
+			label: "Este",
+			text: "A szállodából indulunk. Az Asiatique a folyóparti bevásárló- és szórakozónegyed. A Calypso ladyboy show látványos, a vége a meglepetés — ezt nem spoilerezem. A MahaNakhon Bangkok egyik legmagasabb épülete; az üvegpadló azoknak szól, akik bírják. Vissza tuk-tukkal, a forgalom esti arcán."
+		}]
+	},
+	{
+		slug: "feher-orchidea",
+		title: "Vacsora a Fehér Orchideán",
+		eyebrow: "Dinner cruise",
+		category: "day",
+		place: "Chao Phraya",
+		length: "Este",
+		blurb: "Vacsorahajó a folyón. A palota és a Wat Arun kivilágítva, thai és nemzetközi fogások, és az a szél, ami nappal a csónakon forró volt.",
+		image: "/photos/river.jpg",
+		imageAlt: "Hosszú csónakok a folyón, a Wat Arun fényével",
+		highlights: [
+			"Folyó esti fényben",
+			"Vacsora a fedélzeten",
+			"Templomok a partról"
+		],
+		goodFor: "Párnak, évfordulóra, vagy ha a láb már nem kér több templomot.",
+		days: [{
+			label: "Este",
+			text: "A Fehér Orchidea a klasszikus bangkoki dinner cruise. A lényeg nem a műsor, hanem a part: a Grand Palace, a Wat Arun, a szállodák fénye a vízben. Az ital a hajón felár. A transzfert az ajánlatban rendezzük."
+		}]
+	},
+	{
+		slug: "baiyoke",
+		title: "Baiyoke, fent a város fölött",
+		eyebrow: "Kilátó és büfé",
+		category: "day",
+		place: "Bangkok",
+		length: "Este",
+		blurb: "A Baiyoke Sky teteje: forgó kilátás, büfé, és Bangkok, ami innen már nem zaj, csak rács.",
+		image: "/photos/river.jpg",
+		imageAlt: "A város fényei a folyó fölött",
+		highlights: [
+			"Kilátó",
+			"Büfé",
+			"Éjszakai városkép"
+		],
+		goodFor: "Ha egyszer felülről is látni akarod, hova keveredtél napközben.",
+		days: [{
+			label: "Este",
+			text: "A Baiyoke Sky Hotel kilátója és a büfé egy program. Thai és nemzetközi konyha, a város mind a négy égtáj felé. Nem finométterem-zarándoklat, hanem a magasság. Esős évszakban a felhő is a műsor része."
+		}]
+	},
+	{
+		slug: "dhammakaya",
+		title: "Dhammakaya és a folyó",
+		eyebrow: "Pathum Thani",
+		category: "day",
+		place: "Pathum Thani",
+		length: "Egész nap",
+		blurb: "Az UFO-formájú főtemplom, a legnagyobb szerzetesi közösségek egyike, aztán hajó a Chao Phrayán, lótusz, úszó piac és egy kulturális falu.",
+		image: "/photos/white.jpg",
+		imageAlt: "Fehér szentély, tükör a vízben",
+		highlights: [
+			"Wat Phra Dhammakaya",
+			"Folyó",
+			"Lótuszfarm",
+			"Úszó piac"
+		],
+		goodFor: "Annak, aki a kötelezők után egy másféle buddhizmust akar látni.",
+		days: [{
+			label: "A templom",
+			text: "A Dhammakayát meditációs központnak alapították, 1977-ben lett hivatalos templom. A városi középosztály vitte nagyra az 1980-as években. Hatalmas sztúpa, modern szertartások, és egy közösség, amelynek hívei a milliós nagyságrendet is elérik. A története politikai is — ezt a helyszínen, nyugodtan elmondom."
+		}, {
+			label: "Utána",
+			text: "Hajó a Chao Phrayán, lótuszfarm és múzeum, a Wat San Chao úszó piaca, majd a Ban Saladaeng Nuea kulturális falu. A nap China Town felé zárul."
+		}]
+	},
+	{
+		slug: "minitour",
+		title: "Közép-Thaiföld, két éj",
+		eyebrow: "MiniTour 2 éj / 3 nap",
+		category: "circuit",
+		place: "Bangkok · Kanchanaburi · Ayutthaya",
+		length: "3 nap",
+		blurb: "A rövid körút: vízipiac és a Kwai vidéke, aztán a régi fővárosok. Annak, akinek nincs egy hete északra, de Bangkokon kívül is aludna.",
+		image: "/photos/ayutthaya.jpg",
+		imageAlt: "Ayutthaya romjai arany órában",
+		featured: true,
+		highlights: [
+			"Maeklong",
+			"Damnoen Saduak",
+			"Kanchanaburi",
+			"Ayutthaya"
+		],
+		goodFor: "3 napos kitérőnek a tengerpart előtt vagy után.",
+		days: [
+			{
+				label: "1. nap",
+				text: "Hajnalban Bangkokból. Sófarm, Maeklong vasúti piac, kókuszfalu, csónak a Damnoen Saduaknál, aztán Kanchanaburi. A Kwai vidéke és az éjszaka már nem a főváros zaja."
+			},
+			{
+				label: "2. nap",
+				text: "A híd és a vidék reggele, majd északnak Ayutthaya felé. A romok délutáni fényben mások, mint egy egynapos rohanásban."
+			},
+			{
+				label: "3. nap",
+				text: "Ayutthaya templomai, és vissza Bangkokba — a reptérre vagy a hotelbe, ahogy a jegyek kérik."
+			}
+		]
+	},
+	{
+		slug: "eszak-5",
+		title: "Észak, öt nap",
+		eyebrow: "TH-north 5 nap / 4 éj",
+		category: "circuit",
+		place: "Ayutthaya · Sukhothai · Chiang Rai · Chiang Mai",
+		length: "5 nap",
+		blurb: "A nagy északi ív autóval: régi fővárosok, a gyógyító Buddha, Sukhothai biciklivel, az Aranyháromszög, a fehér templom, elefánt és Doi Suthep.",
+		image: "/photos/white.jpg",
+		imageAlt: "A fehér templom tükörképe Chiang Raiban",
+		featured: true,
+		highlights: [
+			"Sukhothai",
+			"Aranyháromszög",
+			"Wat Rong Khun",
+			"Doi Suthep"
+		],
+		goodFor: "Az első északi útra. Aki már volt velem északon, annak a 4 napos másik ív való.",
+		days: [
+			{
+				label: "1. nap — Sukhothai felé",
+				text: "Korai indulás. Ayutthayában a Wat Phra Si Sanphet, a Viharn Phra Mongkhon Bophit és a Wat Yai Chai Mongkon. Lopburiban a majomtemplom. Phitsanulokban a Wat Phra Si Rattana Mahathat és a Phra Phuttha Chinnarat, az ország egyik legszebb Buddha-ábrázolása. Éjszaka Sukhothaiban."
+			},
+			{
+				label: "2. nap — Lampang",
+				text: "Sukhothai történelmi parkja biciklivel: a tórendszer és az ülő Buddhák. Délután Lampang, a Phra That Lampang Luang, egy régi burmai stílusú templom a városon kívül. Éjszaka Lampangban."
+			},
+			{
+				label: "3. nap — Aranyháromszög",
+				text: "Csónak a Mekongon a három ország határáig, átlépés Laoszba a Don Xao piacra. Chiang Raiban a Wat Rong Khun, a fehér templom. Este Chiang Mai, vacsora a folyóparton."
+			},
+			{
+				label: "4. nap — Chiang Mai",
+				text: "Elefánttábor és dzsungel, bambusztutaj a hegyi patakon, orchidea- és ananászfarm, hegyi falvak. Este khantoke vacsora néptánccal. Ugyanabban a szállodában alszunk."
+			},
+			{
+				label: "5. nap — Doi Suthep",
+				text: "A Wat Phra That Doi Suthep a hegyen, Chiang Mai fölött. Aztán transzfer a reptérre: Bangkok vagy a tengerpart."
+			}
+		]
+	},
+	{
+		slug: "eszak-4",
+		title: "Észak, másodszorra",
+		eyebrow: "4 nap / 3 éj",
+		category: "circuit",
+		place: "Saraburi · Lopburi · Phetchabun",
+		length: "4 nap",
+		blurb: "Annak, aki már járt velem a klasszikus északi íven. Buddha lábnyoma, Lopburi majmai, és a hegyre épült öt Buddha temploma — semmi ismétlés.",
+		image: "/photos/sukhothai.jpg",
+		imageAlt: "Ülő Buddha egy történelmi parkban",
+		highlights: [
+			"Wat Phra Phutthabat",
+			"Lopburi",
+			"Pha Sorn Kaew"
+		],
+		goodFor: "Visszatérő utasnak. Első északnak az öt napos való.",
+		days: [
+			{
+				label: "1. nap",
+				text: "Saraburi, a Wat Phra Phutthabat és a Buddha lábnyoma. Lopburi majomtemploma és a San Phra Kan, ahol a szobor eredetileg hindu volt. Hosszú út Phetchabunba, éjszaka a Burapában."
+			},
+			{
+				label: "2. nap",
+				text: "A Wat Phra That Pha Sorn Kaew: öt Buddha a hegyoldalban, mozaik és felhő. A részleteket a helyszínen mondom el, fénykép ide vagy oda."
+			},
+			{
+				label: "3–4. nap",
+				text: "A kör a hegyvidék kisebb szentélyein át kanyarodik vissza Bangkok felé. A pontos éjszakákat a létszámhoz és a szezonhoz igazítom — ez a túra eleve nem prospektus."
+			}
+		]
+	},
+	{
+		slug: "sziam-angkor",
+		title: "Thaiföld és Angkor",
+		eyebrow: "5 nap / 4 éj",
+		category: "circuit",
+		place: "Bangkok · Kanchanaburi · Khao Yai · Siem Reap",
+		length: "5 nap",
+		blurb: "A kötelező bangkoki nap, a Kwai, Ayutthaya és Lopburi, egy éjszaka Khao Yaiban, aztán két nap Angkor. Magyarul a thai oldalon, khmer vezetővel a templomoknál.",
+		image: "/photos/angkor.jpg",
+		imageAlt: "Angkor Wat hajnalban, tükörképpel",
+		featured: true,
+		highlights: [
+			"BKK-1",
+			"River Kwai",
+			"Khao Yai",
+			"Angkor Wat"
+		],
+		goodFor: "Ha Kambodzsa is belefér, és nem akarsz két külön utat szervezni.",
+		days: [
+			{
+				label: "0. nap",
+				text: "Bangkok: márványtemplom, Wat Pho, Grand Palace, csónak, Wat Arun. Ez a ráhangolás, mielőtt vidékre megyünk."
+			},
+			{
+				label: "1. nap",
+				text: "Sófarm, Maeklong, kókusz, Damnoen Saduak, Wat Tham Sua, éjszaka Kanchanaburiban, a Kwai mellett."
+			},
+			{
+				label: "2. nap",
+				text: "Ayutthaya romjai, Lopburi, éjszaka a Paklop környékén."
+			},
+			{
+				label: "3. nap",
+				text: "Khao Yai nemzeti park, aztán Aranyaprathet és a határ felé."
+			},
+			{
+				label: "4–5. nap",
+				text: "Angkor Wat és Angkor Thom. Az út a siem reap-i reptéri transzferrel zárul."
+			}
+		]
+	},
+	{
+		slug: "angkor-repulo",
+		title: "Angkor, repülővel",
+		eyebrow: "2 nap / 1 éj",
+		category: "circuit",
+		place: "Siem Reap",
+		length: "2 nap",
+		blurb: "Reggel Bangkok, délelőtt már a várárok. Angkor Wat amíg friss a szem, ebéd után Angkor Thom. Másnap a többi templom, és vissza a gépre.",
+		image: "/photos/angkor.jpg",
+		imageAlt: "Angkor sziluettje a várárokban",
+		highlights: [
+			"Angkor Wat",
+			"Angkor Thom",
+			"Bayon"
+		],
+		goodFor: "Ha csak Angkor fér bele, autóval a határ helyett.",
+		days: [{
+			label: "1. nap",
+			text: "Érkezés Siem Reapre. A khmer vezető és a kocsi kint vár. A bőröndöt érdemes letenni, aztán rögtön Angkor Wat — ez a fő látnivaló, és ilyenkor még bírja az ember. A templom alapja laterit, a díszítés homokkő. Ebéd után Angkor Thom: a Bayon arcai és a teraszok. Az ebéd a helyszínen a vendég költsége, a khmer kollégák ragaszkodnak a pihenőhöz."
+		}, {
+			label: "2. nap",
+			text: "A kisebb templomok — Ta Prohm, a fákkal, és amit a járás még elbír. Délután reptér. Hosszabb, 3–4 napos változat is van, ha a Roluos-csoport és a távolabbi szentélyek is kellenek."
+		}]
+	},
+	{
+		slug: "aranyszikla",
+		title: "Yangon és az Aranyszikla",
+		eyebrow: "4 nap / 3 éj, autóval",
+		category: "circuit",
+		place: "Mianmar",
+		length: "4 nap",
+		blurb: "Repülő Yangonba, a Sule és a Shwedagon, másnap Bago ezeréves pagodái, éjszaka a Golden Rock közelében, napfelkelte a sziklán, aztán vissza a piacokra.",
+		image: "/photos/golden.jpg",
+		imageAlt: "Aranyozott pagoda egy gránitsziklán, hajnalban",
+		highlights: [
+			"Shwedagon",
+			"Bago",
+			"Golden Rock",
+			"Bogyoke piac"
+		],
+		goodFor: "Aki a thai körút mellé egy csendesebb, más országos ívet kér.",
+		days: [
+			{
+				label: "1. nap — Yangon",
+				text: "Reggeli érkezés, check-in, aztán a város: Botataung a folyóparton, Sule a belváros közepén, Chaukhtatgyi óriási fekvő Buddhája. Este a Shwedagon, amihez hasonlót máshol nem építettek."
+			},
+			{
+				label: "2. nap — Bago és a szikla",
+				text: "Bago a mon és a mianmari királyság régi fővárosa. Az ezeréves Shwemawdaw, a 9. századi Shwethalyaung fekvő Buddha, a Kyaikpun négy óriás ülő szobra, amelyet Dhammazedi király emeltetett 1476-ban. Aztán fel a Golden Rockhoz, a helyiekkel egy platón. Éjszaka a hegy közelében."
+			},
+			{
+				label: "3. nap",
+				text: "Napfelkelte a sziklán. Reggeli, majd vissza Yangonba."
+			},
+			{
+				label: "4. nap",
+				text: "Fél nap a visszaindulás előtt: Bogyoke piac, galériák, a nemzeti múzeum, a Kandawgyi tó. Este gép Bangkokba."
+			}
+		]
+	},
+	{
+		slug: "khao-yai",
+		title: "Khao Yai, két nap a dzsungelben",
+		eyebrow: "2 nap / 1 éj",
+		category: "circuit",
+		place: "Khao Yai",
+		length: "2 nap",
+		blurb: "Három óra Bangkoktól. Vízesés, kilátó, éjszakai szafari, hajnali madárles és egy legalább kétórás gyalogtúra. Zárt cipő, hosszú nadrág.",
+		image: "/photos/monastery.jpg",
+		imageAlt: "Hajnali köd egy thai erdőben",
+		highlights: [
+			"Haew Narok",
+			"Éjszakai szafari",
+			"Haew Suwat",
+			"Madárles"
+		],
+		goodFor: "Ha a templomok után fák kellenek, nem újabb chedi.",
+		days: [{
+			label: "1. nap",
+			text: "Találkozó a bangkoki hotelben. Haew Narok vízesés, Pha Diew Dai kilátó. Este night safari — az állatok éjszakai élete, nem állatkert. Vacsora után Belle Villa vagy hasonló, a szezon szerint."
+		}, {
+			label: "2. nap",
+			text: "Hajnali madárles, reggeli hattól. Legalább két óra gyalog a dzsungelben; hogy szarvast vagy csak nyomot látunk, a szerencse dolga. Haew Suwat vízesés, aztán vissza Bangkokba. A túrán végig van, aki a biztonságra figyel."
+		}]
+	},
+	{
+		slug: "partok",
+		title: "Tenger, de nem vakon",
+		eyebrow: "Pattaya · Phuket · Samui · Chang",
+		category: "tailor",
+		place: "Partok",
+		length: "Ahogy kéred",
+		blurb: "Pattaya másfél óra a sztrádán. Phuketen James Bond, Phi Phi, Similan, búvárkodás. Samui és Koh Chang csendesebb. A szállást és a vízi napokat a tempódhoz szabom, nem egy kész csomaghoz.",
+		image: "/photos/phuket.jpg",
+		imageAlt: "Mészkőszirtek és egy longtail az Andaman-tengeren",
+		highlights: [
+			"Pattaya",
+			"Phuket szigettúrák",
+			"Koh Samui",
+			"Koh Chang"
+		],
+		goodFor: "A körút utáni napokra, vagy ha a tenger az egész út.",
+		days: [
+			{
+				label: "Pattaya",
+				text: "Thaiföld legkönnyebben elérhető partja, több tízezer szoba, és szinte minden szórakozás, a komolyzenét leszámítva. Nappal Nong Nooch, Mini Siam, elefántfalu vagy a szentély a tenger fölött — éjszaka mindenki megtalálja a saját tempóját."
+			},
+			{
+				label: "Phuket és a szigetek",
+				text: "James Bond-öböl, Phi Phi, Bamboo, Raya és Coral, Similan, ha a szezon engedi. Fantasea show, tengeri horgászat, búvárkodás, és a reptéri transzfer, ami Phuketen tényleg számít. Krabi felől ugyanaz a víz, más a kikötő."
+			},
+			{
+				label: "Samui és Chang",
+				text: "Koh Samui és Koh Chang azoknak való, akik a Phi Phi tömeg helyett reggelt akarnak. Az átkelést és a szállást együtt nézzük meg, mert a komp és az eső itt jobban számít, mint a prospektus."
+			}
+		]
+	},
+	{
+		slug: "meditacio",
+		title: "Meditációs túra",
+		eyebrow: "Kolostor",
+		category: "meditation",
+		place: "Chiang Mai és ismerős kolostorok",
+		length: "Legalább két hét",
+		blurb: "Nem nyaralás. Annak való, aki tanulni akar meditálni, vagy komolyan érdekli a buddhizmus. Minimum négy fő, tíz nap a kolostorban, előtte idő lenyugodni.",
+		image: "/photos/monastery.jpg",
+		imageAlt: "Hajnal egy erdei kolostorban",
+		featured: true,
+		highlights: [
+			"Ismerős kolostor",
+			"Tíz nap gyakorlat",
+			"Chiang Mai"
+		],
+		goodFor: "Csak annak, aki ezt kéri. Nem ajándékútnak.",
+		days: [
+			{
+				label: "A keret",
+				text: "Négy főtől tudok beszélni olyan kolostorokkal, ahol ismernek. A túra minimum két hét: először le kell nyugodni, csak utána kezdődik a tanulás. Tíz napnál rövidebb kurzusnak nincs értelme. Chiang Mai környékén különösen jó programot lehet így összerakni."
+			},
+			{
+				label: "A pénz",
+				text: "Maga a meditációs kurzus ingyenes, a szállásért és az ételért a kolostorban nem kérnek díjat. A végén illik adományt hagyni. A túra többi része — az utazás, a kísérő napok — nem ingyen van. Ezt az ajánlatban szétválasztom."
+			},
+			{
+				label: "A napló",
+				text: "Én is így töltöttem száz napot a dzsungel szélén, fiatal szerzetesként. A történetek a naplóban vannak. A túra nem az én történetem megismétlése, hanem egy rendes kurzus, mesterrel."
+			}
+		]
+	}
+];
+function tourBySlug(slug) {
+	return tours.find((tour) => tour.slug === slug);
+}
+var stories = [
+	{
+		slug: "szaz-nap",
+		title: "Száz nap a dzsungelben",
+		kicker: "Indulás",
+		minutes: "6 perc",
+		image: "/photos/monastery.jpg",
+		imageAlt: "Köd egy erdei kolostor hajnalán",
+		excerpt: "Öt óra, még sötét. Egy frissen avatott szerzetes toporog a mikrobusz körül, a szatyrában egy váltás csuha és egy fogkefe.",
+		body: [
+			"Reggel öt óra van, tök sötét. Egy várakozással teli fiatal szerzetes toporog a templomudvaron álló mikrobusz körül, és várja az indulást. Az ifjú szerzetes alig ötvenéves — szerzetesnek viszont fiatal, mert mindössze néhány hete avatták.",
+			"A sötétben nem látszik a karcsú termet, a nemes arc, a szokatlanul egyenes tekintet. A neve Pra Putaszavako, Pra Andrew, Monk Andrew, ahogy tetszik. A szatyrában minden cókmók: egy váltás csuha, személyes szúnyogháló, fogkefe, fogkrém, szappan, törölköző. Ennyi. A pakolás nem tartott sokáig.",
+			"A sofőr alvástól dagadt szemmel érkezik, nem köszön. Az alsóbb osztályokban a köszönés Thaiföldön nem szokás, de a papot illik köszönteni. Ez elmarad. Feltépi az ajtót, bevágja magát az ülésbe, és tépni kezdi a kormányt. Én ezalatt hátra mászom. A mikrobusz repülőstartot vesz.",
+			"Úgy veszi a kanyarokat, mint a megszállott. Messziről látja, hogy piros a lámpa, mégis gyorsít, és amikor már azt hiszem, hogy áthajtunk rajta, beletapos a fékbe. Égett gumiszag. Annyit nyögök ki: „Luk, csa jen jen.” Nyugi, fiam.",
+			"Útra keltem. Lassan hagyjuk el Bangkokot, és a gondolataimba merülök. Szerzetes jóakaróim szinte kivétel nélkül ezt a burmai határ menti testvérkolostort javasolták meditációra. Az idős főnököt mint a legjobb mestert, a vidéki kolostort a csöndje miatt. Nem kevés ravaszság kellett, hogy fiatal szerzetesként kiharcoljam: a mi kolostorunk főnöke maga is világhírű meditációs mester.",
+			"Bangkokban már megtanultam egy minimális technikát. Pontosan tudom, miről van szó. Azt még mindig nem tudom, mi a meditáció. Hát ezt fogom hamarosan megtudni.",
+			"Néha kinézek, hol járhatunk. Bangkok az a város, ahol minden utca kísértetiesen egyforma: a házak, a boltok, a reklámok, a kereszteződések, az emberek. Kivéve talán a királyi palota környékét. De ma arra nem megyünk."
+		]
+	},
+	{
+		slug: "avatas",
+		title: "Az avatás reggele",
+		kicker: "Buat",
+		minutes: "5 perc",
+		image: "/photos/golden.jpg",
+		imageAlt: "Arany fény egy hegyi szentélyen",
+		excerpt: "Verőfényes, madárcsicsergős vasárnap. Szerzetessé avatásom napja. Hajnali négykor szólalt meg a hongkongi ébresztő.",
+		body: [
+			"Verőfényes, madárcsicsergős vasárnap. Szerzetessé avatásom napja. Hajnali négykor szólalt meg a hongkongi gyártmányú, kacsatestű, gyerekdalt játszó ébresztőm. Minden akaraterőmre szükség volt, hogy felkeljek. Nem sokat aludtam.",
+			"A buat nem jelmezbál. Fehér ruha, a család — ha van a közelben —, a kolostor, a borotva, a fogadalom. Utána már nem a saját neveden szólítanak, és nem a saját tempódban eszel. Reggel koldulni mész, akkor is, ha előző életedben boltjaid voltak.",
+			"Ezen a reggelen még civil a fejem, és már tudom, hogy estére nem lesz. A város zaja ugyanaz, a madarak ugyanazok. Ami változik, az a szabály: mit szabad megérinteni, hova szabad nézni, mikor szabad beszélni. A többiről a kolostor majd gondoskodik.",
+			"Aki meditációs túrára jön velem, nem avatásra jön. Világi vendég marad. De hasznos tudni, milyen házba lép be, és hogy a narancssárga ruha nem kosztüm."
+		]
+	},
+	{
+		slug: "kolostor",
+		title: "A kolostor, belülről",
+		kicker: "Udvar",
+		minutes: "5 perc",
+		image: "/photos/sukhothai.jpg",
+		imageAlt: "Csendes udvar, víz és kő",
+		excerpt: "Másfél kataszteri hold Bangkok kellős közepén. Ma vagyon. Akkor egyszerűen a hely, ahol hajnali négykor megkondul a csengő.",
+		body: [
+			"A kolostor másfél kataszteri holdon terül el. Bangkokban ez ma komoly vagyon. A főútról hosszú, kacskaringós soi vezet be. Két főbejárat van, nem túl messze egymástól: az egyik rögtön a templomba visz, a másik az udvarra.",
+			"Hajnali négykor szólal meg a harang. Harangnak sok, inkább csengő: aritmikusan verik, bi-bing, ba, ba-ban-bang. Ha agyonütnének, se tudnám utána csinálni. A testvér, aki veri, évek óta ugyanazt a ritmust őrzi, és az egész ház erre ébred.",
+			"A kuti a szerzetes cellája. Kicsi, szúnyoghálós, egy szőnyeg, egy tál. A közös élet a templom körül történik: a koldulás, a tanulás, a sepregetés, a vita arról, ki melyik szabályt érti félre. A turista ebből a kaput látja. Én egy ideig a kapun belül aludtam.",
+			"Ezért tudom megmutatni a márványtemplomnál, meddig lehet besétálni, és hol kell megállni. A határ nem a kerítés. A határ a szokás."
+		]
+	},
+	{
+		slug: "vipassana",
+		title: "Vipasszaná, ha nincs mester a közelben",
+		kicker: "Gyakorlat",
+		minutes: "7 perc",
+		image: "/photos/white.jpg",
+		imageAlt: "Csendes reggel egy fehér szentélynél",
+		excerpt: "Gyakorlati tanácsok azoknak, akik egyedül, mester nélkül ülnének le. Aki mesterrel tanul, az kizárólag a mesterét kövesse.",
+		body: [
+			"Gyakorlati tanácsok azoknak, akik egyedül, mester nélkül akarnak meditálni. Aki mesterrel tanul, az kizárólag a mestere útmutatását kövesse. A kettőt keverni ostobaság.",
+			"A vipasszaná nem ellazulás és nem vizualizáció. Ülsz, és észreveszed, ami történik: a lélegzetet, a viszketést, a gondolatot, ami azt hiszi, hogy ő te vagy. Nem kell elűzni. Észrevenni kell, és nem menni utána.",
+			"Kezdetnek rövid ülés elég, minden nap ugyanakkor. A hát egyenes, a szem lefelé vagy csukva, a telefon másik szobában. Ha elalszol, nem bűn — fáradt vagy. Ha száz gondolatod van, az sem hiba. A hiba az, ha úgy teszel, mintha nem lettek volna.",
+			"Thaiföldön könnyű összetéveszteni a kolostort a wellnesszel. A kolostor hajnali, a padló kemény, a beszéd kevés. Aki tíz napot kér tőlem, annak ezt mondom előre. Aki csak a történetre kíváncsi, olvassa a naplót, és jöjjön inkább a Wat Pho-hoz."
+		]
+	}
+];
+function storyBySlug(slug) {
+	return stories.find((story) => story.slug === slug);
+}
+var tips = [
+	{
+		title: "Öltözködés",
+		body: "Könnyű pamut, a túrára kényelmes cipő. A templomban mindenütt lejön a cipő, ezért papucs és zokni a praktikus — főleg, ha érzékeny a lábad. A Királyi Palotában a férfiaknak bokáig érő nadrág, a hölgyeknek térdet takaró szoknya vagy nadrág, vállat és hasat takaró felső. Bermuda, halásznadrág, szakadt farmer nem felel meg."
+	},
+	{
+		title: "Tisztelet",
+		body: "A fej a lélek helye, felnőtt fejét nem érintjük. A talpat nem fordítjuk másra, Buddha-szoborra végképp nem. Hölgy szerzetest nem érint. A királyi család témáját kerüljük: a félreértésnek itt súlya van. Bárhová belépünk Ázsiában, illik levenni a cipőt. A templomban ez nem illik, hanem kötelező."
+	},
+	{
+		title: "Idő és évszak",
+		body: "A száraz évszak novembertől márciusig tart. Utána jön a forróság, aztán a monszun — a zuhatagok ilyenkor a legszebbek, a dzsungeltúra a legcsúszósabb. Magyarországhoz képest télen hat, nyáron öt óra a különbség. Thaiföld területe nagyjából 514 ezer négyzetkilométer, a szomszédok Mianmar, Laosz, Kambodzsa és Malajzia."
+	},
+	{
+		title: "Szálloda",
+		body: "A szobák általában 14 órától foglalhatók, délben kell elhagyni őket. Két-három órát gyakran el lehet kérni a portán, ha előre szólsz. A bőrönd addig a portán maradhat, a medence használható. Naponta két üveg vizet tesznek be, ez jár. A minibár nem. A kauciót inkább készpénzben, külföldi valutában add, ne a kártyádat hagy blokkolva."
+	},
+	{
+		title: "Taxi",
+		body: "Úton lévő, lehetőleg új taxit válassz. Az órát köteles bekapcsolni. Ha nem akarja, szállj ki. A hotel előtt sorakozó kocsikat és a portás által rendelt taxit inkább kerüld. Ha éttermet vagy „különleges show-t” ajánl, az nem szívesség."
+	},
+	{
+		title: "Evés és víz",
+		body: "A thai konyha a világ gazdagjai közé tartozik, és a tiszta kifőzde gyakran jobb, mint a hotel étterme, mert ott főzik, amit reggel vettek. Utcán az újra meg újra sütött olajat kerüld. Gyümölcsnél a hámozhatót válaszd. A csapvíz nem iható, fogmosásra, mosdásra jó. Az üdítő és az alkohol az étkezős programokon is a vendégé."
+	},
+	{
+		title: "Masszázs",
+		body: "A masszázs itt kultúra, és olcsó. A tengerparti bódékat nem ajánlom: túl sok sérülést láttam képzetlen kéztől. Ott masszíroztass, ahol sokan dolgoznak egyszerre, és látszik a rutin. Száz baht borravaló illik."
+	},
+	{
+		title: "Repülő és érték",
+		body: "A feladott bőrönd súlya társaságonként változik, gyakran 20–25 kiló. Az útlevél elég a check-inhez. Indulás előtt a bangkoki reptéren becsomagoltathatod a bőröndöt, a negyedik emeleten, biztonságból. Útlevelet és értéket a szálloda széfjébe tegyél. Drágább vásárlásnál számla kell: név, cím, áru, érték, dátum."
+	}
+];
+var places = [
+	"Bangkok",
+	"Ayutthaya",
+	"Damnoen Saduak",
+	"Amphawa",
+	"Kanchanaburi",
+	"Sukhothai",
+	"Chiang Rai",
+	"Chiang Mai",
+	"Khao Yai",
+	"Angkor",
+	"Yangon",
+	"Phuket"
+];
+function Frame({ children, tone = "paper" }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: tone === "ink" ? "bg-ink text-paper" : "bg-paper text-fg",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header, { overDark: tone === "ink" }),
+			children,
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
+		]
+	});
+}
+function Header({ overDark }) {
+	const path = useRouterState({ select: (state) => state.location.pathname });
+	const [open, setOpen] = (0, import_react.useState)(false);
+	const [scrolled, setScrolled] = (0, import_react.useState)(false);
+	const home = path === "/";
+	(0, import_react.useEffect)(() => {
+		const onScroll = () => setScrolled(window.scrollY > 8);
+		onScroll();
+		window.addEventListener("scroll", onScroll, { passive: true });
+		return () => window.removeEventListener("scroll", onScroll);
+	}, []);
+	(0, import_react.useEffect)(() => {
+		setOpen(false);
+	}, [path]);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
+		className: `fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${!home || scrolled || open || !overDark ? "border-b border-fog/15 bg-ink/92 text-paper backdrop-blur-md" : "bg-transparent text-paper"}`,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mx-auto flex h-16 max-w-6xl items-center justify-between px-5",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+					to: "/",
+					className: "group flex items-baseline gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "font-display text-2xl tracking-tight",
+						children: "Yiam"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "hidden text-xs uppercase tracking-[0.18em] text-fog sm:inline",
+						children: "Thaiföld"
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+					className: "hidden items-center gap-7 md:flex",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/turak",
+							search: {
+								fajta: "mind",
+								q: ""
+							},
+							className: "text-sm text-fog transition-colors duration-200 hover:text-gold",
+							children: "Túrák"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/turak",
+							search: {
+								fajta: "circuit",
+								q: ""
+							},
+							className: "text-sm text-fog transition-colors duration-200 hover:text-gold",
+							children: "Körutak"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/naplo",
+							className: "text-sm text-fog transition-colors duration-200 hover:text-gold",
+							children: "Napló"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/utmutato",
+							className: "text-sm text-fog transition-colors duration-200 hover:text-gold",
+							children: "Útmutató"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/ajanlat",
+							search: { tura: "" },
+							className: "rounded-full bg-saffron px-4 py-3 text-sm font-medium text-ink transition-colors duration-200 hover:bg-gold md:py-2",
+							children: "Ajánlatot kérek"
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+					type: "button",
+					className: "grid h-11 w-11 place-items-center rounded-full border border-fog/30 md:hidden",
+					"aria-label": open ? "Menü bezárása" : "Menü",
+					onClick: () => setOpen((value) => !value),
+					children: open ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { size: 18 }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, { size: 18 })
+				})
+			]
+		}), open ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "border-t border-fog/15 bg-ink px-5 py-4 md:hidden",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex flex-col gap-1",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: "/turak",
+						search: {
+							fajta: "mind",
+							q: ""
+						},
+						className: "rounded-xl px-3 py-3 text-lg text-paper",
+						children: "Túrák"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: "/turak",
+						search: {
+							fajta: "circuit",
+							q: ""
+						},
+						className: "rounded-xl px-3 py-3 text-lg text-paper",
+						children: "Körutak"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: "/naplo",
+						className: "rounded-xl px-3 py-3 text-lg text-paper",
+						children: "Napló"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: "/utmutato",
+						className: "rounded-xl px-3 py-3 text-lg text-paper",
+						children: "Útmutató"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: "/ajanlat",
+						search: { tura: "" },
+						className: "mt-2 rounded-full bg-saffron px-4 py-3 text-center font-medium text-ink",
+						children: "Ajánlatot kérek"
+					})
+				]
+			})
+		}) : null]
+	});
+}
+function Footer() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", {
+		className: "bg-ink text-paper",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "md:col-span-2",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-display text-4xl",
+						children: "Yiam"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+						className: "mt-3 max-w-sm text-fog",
+						children: [brand.line, ". Harminc év Bangkokban, magyarul, végig."]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-xs uppercase tracking-[0.18em] text-gold",
+						children: "Telefon"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						className: "mt-3 block hover:text-gold",
+						href: `tel:${brand.phoneHu.replace(/\s/g, "")}`,
+						children: brand.phoneHu
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						className: "mt-1 block hover:text-gold",
+						href: `tel:${brand.phoneTh.replace(/\s/g, "")}`,
+						children: brand.phoneTh
+					})
+				] }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-xs uppercase tracking-[0.18em] text-gold",
+						children: "Levél"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						className: "mt-3 block hover:text-gold",
+						href: `mailto:${brand.email}`,
+						children: brand.email
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-4 text-sm text-fog",
+						children: "Árat a létszám, a szezon és a tempó dönti el. Nem listázok kamu „tól-ig” számot."
+					})
+				] })
+			]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "border-t border-fog/15 px-5 py-5 text-center text-xs uppercase tracking-[0.16em] text-mist",
+			children: "Bangkok · Chiang Mai · Angkor"
+		})]
+	});
+}
+function TourCard({ tour }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+		to: "/turak/$slug",
+		params: { slug: tour.slug },
+		className: "group flex flex-col overflow-hidden rounded-card bg-paper shadow-[0_1px_0_rgba(16,22,18,0.06)] ring-1 ring-line transition duration-300 hover:-translate-y-1 hover:ring-gold",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "relative aspect-[4/3] overflow-hidden",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+				src: tour.image,
+				alt: tour.imageAlt,
+				className: "h-full w-full object-cover transition duration-500 group-hover:scale-105"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "absolute left-3 top-3 rounded-full bg-ink/80 px-3 py-1 text-xs uppercase tracking-[0.14em] text-paper backdrop-blur-sm",
+				children: categoryLabel[tour.category]
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex flex-1 flex-col p-5",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-xs uppercase tracking-[0.16em] text-gold-deep",
+					children: tour.eyebrow
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "mt-2 font-display text-2xl leading-tight text-ink",
+					children: tour.title
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-3 flex-1 text-sm text-mist",
+					children: tour.blurb
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+					className: "mt-4 flex items-center justify-between text-sm text-fg",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: tour.place }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-gold-deep",
+						children: tour.length
+					})]
+				})
+			]
+		})]
+	});
+}
+function NotFoundPage() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Frame, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
+		className: "page-enter mx-auto max-w-3xl px-5 pb-24 pt-36",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "text-xs uppercase tracking-[0.18em] text-gold-deep",
+				children: "404"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+				className: "mt-3 font-display text-5xl text-ink",
+				children: "Ez az út nincs a térképen."
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-4 text-mist",
+				children: "A túrák között biztosan megvan, amit kerestél."
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+				to: "/turak",
+				search: {
+					fajta: "mind",
+					q: ""
+				},
+				className: "mt-8 inline-flex rounded-full bg-ink px-5 py-3 text-paper",
+				children: "Összes túra"
+			})
+		]
+	}) });
+}
+//#endregion
+export { categoryLabel as a, storyBySlug as c, tours as d, brand as i, tips as l, NotFoundPage as n, places as o, TourCard as r, stories as s, Frame as t, tourBySlug as u };

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Yiam — magyar idegenvezetés Thaiföldön",
+      "hasCanvas": false,
+      "bodyTextLen": 3710,
+      "bodyTextHash": "cd28c914b8f8b99f87f2a4f3c2a24e66e2926c3a0620ee4981cbac32d8225b5a",
+      "bodyTextPrefix": "Yiam THAIFÖLD Túrák Körutak Napló Útmutató Ajánlatot kérek BANGK",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Yiam — magyar idegenvezetés Thaiföldön",
+      "hasCanvas": false,
+      "bodyTextLen": 3656,
+      "bodyTextHash": "353f8302826c09998cd58484fea4ff279eeb0b4c7b600f2c02d64d6f9198f018",
+      "bodyTextPrefix": "Yiam BANGKOK · 30 ÉV HELYISMERET Thaiföld, magyarul. Nem a prosp",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

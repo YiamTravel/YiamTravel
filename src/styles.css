@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Outfit", "Avenir Next", system-ui, sans-serif;
+
+  --color-ink: #101612;
+  --color-ink-soft: #1b2620;
+  --color-paper: #f3eee4;
+  --color-paper-deep: #e7e0d2;
+  --color-gold: #c6a15b;
+  --color-gold-deep: #8d6b32;
+  --color-saffron: #d4652f;
+  --color-moss: #3e6b52;
+  --color-mist: #8a8478;
+  --color-fog: #d5cec2;
+  --color-line: #ddd4c6;
+  --color-fg: #141a16;
+
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-weight: 420;
+    line-height: 1.55;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 520;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .page-enter {
+    animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(180deg, color-mix(in oklab, var(--color-ink) 42%, transparent) 0%, color-mix(in oklab, var(--color-ink) 18%, transparent) 34%, color-mix(in oklab, var(--color-ink) 78%, transparent) 100%);
+  }
+
+  .ken {
+    animation: ken 32s ease-out both;
+  }
+
+  .ticker-track {
+    animation: ticker 42s linear infinite;
+  }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes ken {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .page-enter, .ken, .ticker-track { animation: none; }
+  .page-enter { opacity: 1; transform: none; }
+}
